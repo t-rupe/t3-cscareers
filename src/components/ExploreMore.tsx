@@ -102,30 +102,30 @@ const careers: Career[] = [
     },
   ];
 
-  function shuffleArray(array: any[]): any[] {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
   
   
   export default function ExploreMore() {
     const router = useRouter()
-    // Retrieve the current slug from the router
     const currentSlug = router.query.slug
-  
-    // Filter out the current career
     const otherCareers = careers.filter(career => career.slug !== currentSlug)
-  
     const [displayedCareers, setDisplayedCareers] = useState<Career[]>([]);
+  
+    function shuffleArray(array: Career[]): Career[] {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = arr[i];
+          arr[i] = arr[j]!;
+          arr[j] = temp!;
+      }
+      return arr;
+    }
+  
   
     useEffect(() => {
       if(currentSlug) {
-        const otherCareers = careers.filter(career => career.slug !== currentSlug);
         const shuffledCareers = shuffleArray(otherCareers);
-        const careersToDisplay = shuffledCareers.slice(0, 3).sort((a, b) => a.slug.localeCompare(b.slug));
+        const careersToDisplay = shuffledCareers.slice(0, 3).sort((a: Career, b: Career) => a.slug.localeCompare(b.slug));
         setDisplayedCareers(careersToDisplay);
       }
     }, [currentSlug]);

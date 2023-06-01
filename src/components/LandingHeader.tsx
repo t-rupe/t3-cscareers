@@ -51,7 +51,9 @@ export default function LandingHeader() {
     }, 1300) //Changes every 2 seconds
 
     return () => clearInterval(timer) //Clear interval on unmount
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
 
   return (
     <div className="bg-gray-900">
