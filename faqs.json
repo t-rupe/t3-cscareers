@@ -1,0 +1,74 @@
+{
+  "web-developer": [
+    {
+      "question": "What does a Web Developer do?",
+      "answer": "A Web Developer designs, codes, and modifies websites, from layout to function, according to a client's specifications. They strive to create visually appealing sites that feature user-friendly design and clear navigation."
+    },
+    {
+      "question": "What skills do you need to become a Web Developer?",
+      "answer": "A Web Developer typically needs skills in HTML/CSS, JavaScript, responsive design, version control/Git, and testing/debugging. Knowledge in a backend language, database management, and restful API's is also beneficial."
+    },
+    {
+      "question": "Is a degree required to become a Web Developer?",
+      "answer": "While having a degree can be beneficial, it's not always required to become a Web Developer. Many successful Web Developers are self-taught or have completed a coding bootcamp."
+    },
+    {
+      "question": "What is the average salary for a Web Developer?",
+      "answer": " The average salary for a web developer is around $82,486,000 per year in 2023. Keep in mind, salaries vary depending on location, level of experience, and the specific technologies in which the developer specializes."
+    }
+  ],
+  "software-developer": [
+    {
+      "question": "What does a Software Developer do?",
+      "answer": "Software Developers are the creative minds behind software programs. They create and test software used in various industries and may work on programming applications for desktops, mobile devices, and the web."
+    },
+    {
+      "question": "What skills do you need to become a Software Developer?",
+      "answer": "Software Developers typically need skills in one or more programming languages like Java, C#, or Python, problem-solving skills, knowledge of data structures and algorithms, as well as understanding of software design principles."
+    },
+    {
+      "question": "Is a degree required to become a Software Developer?",
+      "answer": "Many Software Developers have a degree in Computer Science or a related field, but it's also possible to enter the field with a coding bootcamp or being self-taught. Some employers focus more on skills and practical knowledge rather than formal education."
+    },
+    {
+      "question": "What is the average salary for a Software Developer?",
+      "answer": "The average salary for a software developer is around $121,000 per year in 2021.Salaries vary widely depending on location, experience, and the specific technologies the developer is proficient in."
+    }
+  ],
+  "cybersecurity-analyst": [
+    {
+      "question": "What is Cyber Security?",
+      "answer": "Cyber security involves protecting digital systems and data from unauthorized access, attacks, and threats."
+    },
+    {
+      "question": "How to Get Into Cyber Security?",
+      "answer": "To get into cyber security, acquire relevant skills like network security, incident response, and ethical hacking. Earn certifications and gain practical experience through internships or entry-level positions."
+    },
+    {
+      "question": "How Much Does Cyber Security Pay?",
+      "answer": "The average salary for a cybersecurity analyst is approximately $93,519 per year (source: ZipRecruiter). However, salaries may vary based on factors such as experience, location, and industry."
+    },
+    {
+      "question": "Is Cyber Security Hard?",
+      "answer": "Cyber security can be challenging due to its complexity, constant evolution, and the need for continuous learning. However, with dedication and the right mindset, it is an attainable and rewarding field."
+    }
+  ],
+  "data-scientist": [
+    {
+      "question": "What does a Data Scientist do?",
+      "answer": "A Data Scientist uses a blend of programming, statistical skills, and industry knowledge to gather, analyze, and interpret large datasets. They use this data to develop data-driven solutions to business problems."
+    },
+    {
+      "question": "What skills do you need to become a Data Scientist?",
+      "answer": "Data Scientists typically need strong skills in programming (often in Python or R), statistics, machine learning, data wrangling, and data visualization. Soft skills like problem-solving and effective communication are also essential."
+    },
+    {
+      "question": "Is a degree required to become a Data Scientist?",
+      "answer": "Many Data Scientists have a degree in fields like computer science, data science, mathematics, or statistics, but it's also possible to enter the field with relevant experience or self-learning. Some employers focus more on skills and practical knowledge rather than formal education."
+    },
+    {
+      "question": "What is the average salary for a Data Scientist?",
+      "answer": "According to BLS.gov, the median annual wage for data scientists was $100,910 in May 2021, with the highest 10 percent earning more than $167,040. Salaries can vary widely depending on location, experience, and industry. For instance, data scientists in scientific research and development services had a median annual wage of $102,750. "
+    }
+]
+}
