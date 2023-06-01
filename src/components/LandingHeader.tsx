@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-
+import Link from 'next/link'
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'Careers', href: '/career' },
@@ -58,10 +58,10 @@ export default function LandingHeader() {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">CS Careers</span>
               <Image src="/cscareerslogo.svg" alt="CS Careers" width={32} height={16} />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -75,9 +75,9 @@ export default function LandingHeader() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-lg font-semibold leading-6 text-white">
+              <Link key={item.name} href={item.href} className="text-lg font-semibold leading-6 text-white">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -86,7 +86,7 @@ export default function LandingHeader() {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <Link href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <Image
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
@@ -94,7 +94,7 @@ export default function LandingHeader() {
                   width={32}
                   height={32}
                 />
-              </a>
+              </Link>
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-400"
@@ -108,22 +108,22 @@ export default function LandingHeader() {
               <div className="-my-6 divide-y divide-gray-500/25">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-7x1 font-semibold leading-7 text-white hover:bg-gray-800"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
+                  <Link
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-8xl font-semibold leading-7 text-white hover:bg-gray-800"
                   >
                     Log in
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -159,12 +159,12 @@ export default function LandingHeader() {
               Empower Yourself with the Skills and Knowledge to Shape a Tech-Driven Future
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <Link
                 href="/career"
                 className="rounded-md bg-indigo-700 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
               >
                 Get started
-              </a>
+              </Link>
             </div>
           </div>
         </div>

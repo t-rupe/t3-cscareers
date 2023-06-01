@@ -97,7 +97,7 @@ export async function getServerSideProps({ params }: { params: { slug: string } 
       metaDescription
     }
   `;
-  const data = await getClient().fetch(query, { slug });
+  const data: Article = await getClient().fetch(query, { slug });
 
   return {
     props: {
