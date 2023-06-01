@@ -132,7 +132,7 @@ const careers: Career[] = [
     
   
     return (
-      <div className="bg-gray-900 py-24 sm:py-32">
+      <div className="bg-gray-900 py-24 sm:py-12">
         <hr className="border-t border-gray-700 mb-6"></hr>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">

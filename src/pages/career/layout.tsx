@@ -1,6 +1,7 @@
 import ExploreMore from "~/components/ExploreMore";
 import BasicHeader from "~/components/BasicHeader";
 import DynamicFAQ from "~/components/DynamicFAQ";
+import LandingFooter from "~/components/LandingFooter";
 
 export default function CareerLayout({
     children, // will be a page or nested layout
@@ -13,6 +14,7 @@ export default function CareerLayout({
         {children}
         <DynamicFAQ />
         <ExploreMore />
+        <LandingFooter />
       </section>
     );
   }

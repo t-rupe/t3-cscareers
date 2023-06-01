@@ -50,7 +50,7 @@ export default function LandingFooter() {
   return (
     <footer className="bg-gray-900">
       <hr className="border-t border-gray-700 mb-6"></hr>
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-6 lg:px-8">
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
@@ -60,7 +60,7 @@ export default function LandingFooter() {
             </div>
           ))}
         </nav>
-        <div className="mt-10 flex justify-center space-x-10">
+        <div className="flex justify-center space-x-10">
           {navigation.social.map((item) => (
             <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">{item.name}</span>
@@ -68,7 +68,7 @@ export default function LandingFooter() {
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+        <p className="mt-5 text-center text-xs leading-5 text-gray-500">
           &copy; 2023 ComputerScience.Careers. All rights reserved.
         </p>
       </div>

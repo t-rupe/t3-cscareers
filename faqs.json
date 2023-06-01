@@ -70,5 +70,204 @@
       "question": "What is the average salary for a Data Scientist?",
       "answer": "According to BLS.gov, the median annual wage for data scientists was $100,910 in May 2021, with the highest 10 percent earning more than $167,040. Salaries can vary widely depending on location, experience, and industry. For instance, data scientists in scientific research and development services had a median annual wage of $102,750. "
     }
+],
+"ai-developer": [
+  {
+    "question": "What does an AI Developer do?",
+    "answer": "An AI Developer designs and implements artificial intelligence models into applications to fulfill certain tasks that would normally require human intelligence, such as interpreting complex data, recognizing patterns, and making predictions."
+  },
+  {
+    "question": "What skills do you need to become an AI Developer?",
+    "answer": "AI Developers typically need strong skills in programming (often in Python, R or Java), machine learning, deep learning, neural networks, statistics, and natural language processing. Knowledge in TensorFlow, PyTorch or similar libraries is also beneficial."
+  },
+  {
+    "question": "Is a degree required to become an AI Developer?",
+    "answer": "Many AI Developers have a degree in fields like computer science, data science, mathematics, or statistics, but it's also possible to enter the field with relevant experience, certifications, or self-learning. Some employers focus more on skills and practical knowledge rather than formal education."
+  },
+  {
+    "question": "What is the average salary for an AI Developer?",
+    "answer": "The average salary for an AI Developer is around $114,121 per year in 2023. Salaries can vary widely depending on location, experience, and industry."
+  }
+],
+"database-administrator": [
+  {
+    "question": "What does a Database Administrator do?",
+    "answer": "A Database Administrator (DBA) is responsible for the performance, integrity, and security of a database. They are involved in the planning and development of the database, as well as troubleshooting any issues on behalf of the users."
+  },
+  {
+    "question": "What skills do you need to become a Database Administrator?",
+    "answer": "Database Administrators usually need strong skills in database languages like SQL, problem-solving skills, familiarity with database design, understanding of distributed computing architectures and database security."
+  },
+  {
+    "question": "Is a degree required to become a Database Administrator?",
+    "answer": "While many Database Administrators have a degree in computer science or a related field, practical experience with database management and related certifications can also be sufficient. It ultimately depends on the specific requirements of the employer."
+  },
+  {
+    "question": "What is the average salary for a Database Administrator?",
+    "answer": "According to Payscale, the average salary for a Database Administrator is around $73,506 per year in 2023. However, this can vary depending on experience, location, and specific skills."
+  }
+],
+"mobile-app-developer": [
+  {
+    "question": "What does a Mobile App Developer do?",
+    "answer": "A Mobile App Developer designs and builds applications for mobile devices. They work with multiple programming languages and operating systems, and ensure the functionality, reliability, and performance of the apps."
+  },
+  {
+    "question": "What skills do you need to become a Mobile App Developer?",
+    "answer": "Mobile App Developers typically need strong skills in programming (Swift/Kotlin for native development, or JavaScript for cross-platform development), UI/UX design, understanding of REST APIs, databases, and proficiency with the specific platform (iOS, Android) development tools."
+  },
+  {
+    "question": "Is a degree required to become a Mobile App Developer?",
+    "answer": "Many Mobile App Developers have a degree in Computer Science or a related field, but it's also possible to enter the field with a coding bootcamp, online courses, or being self-taught. Some employers focus more on skills and practical knowledge rather than formal education."
+  },
+  {
+    "question": "What is the average salary for a Mobile App Developer?",
+    "answer": "The average salary for a mobile app developer is around $76,702 per year in 2023, but this can vary widely depending on location, experience, and the specific platform the developer specializes in."
+  }
+],
+"cloud-developer": [
+  {
+    "question": "What does a Cloud Developer do?",
+    "answer": "A Cloud Developer develops software and network systems for cloud environments, such as public cloud, private cloud, and hybrid clouds. They work on cloud application designs, cloud approval plans, and systems required to manage cloud storage."
+  },
+  {
+    "question": "What skills do you need to become a Cloud Developer?",
+    "answer": "Cloud Developers typically need strong skills in cloud platforms such as AWS, Google Cloud, or Azure, programming languages like Python or Java, DevOps, databases, and understanding of cloud security."
+  },
+  {
+    "question": "Is a degree required to become a Cloud Developer?",
+    "answer": "Many Cloud Developers have a degree in computer science or a related field, but it's also possible to enter the field with relevant experience, certifications, or self-learning. Some employers focus more on skills and practical knowledge rather than formal education."
+  },
+  {
+    "question": "What is the average salary for a Cloud Developer?",
+    "answer": "The average salary for a Cloud Developer is around $117,000 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
+],
+"ui-ux-designer": [
+  {
+    "question": "What does a UI/UX Designer do?",
+    "answer": "A UI/UX Designer is responsible for designing and implementing the interface and experience for users in a software product. They consider the user's needs and expectations, creating a logical flow and intuitive interface to ensure a positive user experience."
+  },
+  {
+    "question": "What skills do you need to become a UI/UX Designer?",
+    "answer": "UI/UX Designers typically need skills in design software like Sketch or Adobe XD, prototyping tools like Figma or InVision, user research, information architecture, interaction design, and visual design."
+  },
+  {
+    "question": "Is a degree required to become a UI/UX Designer?",
+    "answer": "While many UI/UX Designers have a degree in design or a related field, practical experience and a strong portfolio can also be sufficient. It ultimately depends on the specific requirements of the employer."
+  },
+  {
+    "question": "What is the average salary for a UI/UX Designer?",
+    "answer": "The average salary for a UI/UX Designer is around $85,277 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
+],
+"product-manager": [
+  {
+    "question": "What does a Product Manager do?",
+    "answer": "A Product Manager is responsible for guiding the success of a product and leading the cross-functional team that's responsible for improving it. This includes setting the strategy, roadmap, and feature definition for the product or product line."
+  },
+  {
+    "question": "What skills do you need to become a Product Manager?",
+    "answer": "Product Managers typically need skills in product strategy, project management, data analysis, and a basic understanding of software development. Soft skills like leadership, communication, and decision-making are also crucial."
+  },
+  {
+    "question": "Is a degree required to become a Product Manager?",
+    "answer": "While many Product Managers have a degree in Business or a related field, practical experience and proven leadership abilities are often more important. It ultimately depends on the specific requirements of the employer."
+  },
+  {
+    "question": "What is the average salary for a Product Manager?",
+    "answer": "The average salary for a Product Manager is around $111,000 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
+],
+"digital-marketer": [
+  {
+    "question": "What does a Digital Marketer do?",
+    "answer": "A Digital Marketer is responsible for developing, implementing, and managing marketing campaigns that promote a company's products or services on digital channels such as search engines, social media, email, and their own websites."
+  },
+  {
+    "question": "What skills do you need to become a Digital Marketer?",
+    "answer": "Digital Marketers typically need skills in content creation, SEO/SEM, data analysis, social media management, and knowledge of digital marketing tools and platforms. Creativity and strong communication skills are also important."
+  },
+  {
+    "question": "Is a degree required to become a Digital Marketer?",
+    "answer": "While many Digital Marketers have a degree in Marketing or a related field, practical experience, certifications, and a good understanding of digital platforms and trends can also be sufficient. It ultimately depends on the specific requirements of the employer."
+  },
+  {
+    "question": "What is the average salary for a Digital Marketer?",
+    "answer": "The average salary for a Digital Marketer is around $72,000 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
+],
+"devops-engineer": [
+  {
+    "question": "What does a DevOps Engineer do?",
+    "answer": "A DevOps Engineer works with developers and the IT staff to oversee the code releases. They bridge the gap between the development and operations in a company, deploying software and improving its reliability and speed."
+  },
+  {
+    "question": "What skills do you need to become a DevOps Engineer?",
+    "answer": "DevOps Engineers typically need strong skills in systems administration, scripting languages like Python or Ruby, knowledge of cloud platforms, understanding of automation tools and Continuous Integration/Continuous Deployment, and strong problem-solving skills."
+  },
+  {
+    "question": "Is a degree required to become a DevOps Engineer?",
+    "answer": "Many DevOps Engineers have a degree in computer science or a related field, but it's also possible to enter the field with relevant experience, certifications, or self-learning. Some employers focus more on skills and practical knowledge rather than formal education."
+  },
+  {
+    "question": "What is the average salary for a DevOps Engineer?",
+    "answer": "The average salary for a DevOps Engineer is around $115,666 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
+],
+"game-developer": [
+  {
+    "question": "What does a Game Developer do?",
+    "answer": "A Game Developer is involved in the creation and production of games for computers, consoles, arcades, and mobile devices. They work on various aspects, including programming, art and animation, level design, and gameplay design."
+  },
+  {
+    "question": "What skills do you need to become a Game Developer?",
+    "answer": "Game Developers typically need strong skills in programming languages like C++ or Java, a good understanding of the gaming process and experience with game development platforms such as Unity or Unreal Engine."
+  },
+  {
+    "question": "Is a degree required to become a Game Developer?",
+    "answer": "While many Game Developers have a degree in computer science, game design, or a related field, practical experience and a strong portfolio can also be sufficient. It ultimately depends on the specific requirements of the employer."
+  },
+  {
+    "question": "What is the average salary for a Game Developer?",
+    "answer": "The average salary for a Game Developer is around $101,644 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
+],
+"blockchain-developer": [
+  {
+    "question": "What does a Blockchain Developer do?",
+    "answer": "A Blockchain Developer works with designing, implementing, and supporting a distributed blockchain-based network. Their responsibilities include analyzing requirements, designing blockchain technology around a certain business model, and the building and launching of a blockchain network."
+  },
+  {
+    "question": "What skills do you need to become a Blockchain Developer?",
+    "answer": "Blockchain Developers need a strong understanding of blockchain architecture, data structures, cryptography, smart contract development, and languages like Solidity. Familiarity with networking, security, and decentralization is also important."
+  },
+  {
+    "question": "Is a degree required to become a Blockchain Developer?",
+    "answer": "While a degree in computer science or a related field can be beneficial, many Blockchain Developers are self-taught. A deep understanding of the technology, good programming skills, and experience with blockchain platforms are often more important than formal education."
+  },
+  {
+    "question": "What is the average salary for a Blockchain Developer?",
+    "answer": "The average salary for a Blockchain Developer is around $154,550 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
+],
+"it-project-manager": [
+  {
+    "question": "What does an IT Product Manager do?",
+    "answer": "An IT Product Manager oversees the successful delivery of IT products, from the initial concept to the final product. They work with various stakeholders to define the product vision, strategy, and roadmap."
+  },
+  {
+    "question": "What skills do you need to become an IT Product Manager?",
+    "answer": "IT Product Managers typically need strong skills in product strategy, project management, understanding of software development processes, and strong communication skills. They often need to balance technical, business, and user needs."
+  },
+  {
+    "question": "Is a degree required to become an IT Product Manager?",
+    "answer": "While many IT Product Managers have a degree in Business, IT, or a related field, practical experience and proven leadership abilities are often more important. It ultimately depends on the specific requirements of the employer."
+  },
+  {
+    "question": "What is the average salary for an IT Product Manager?",
+    "answer": "The average salary for an IT Product Manager is around $118,000 per year in 2023, but this can vary widely depending on location, experience, and specific skills."
+  }
 ]
 }
+
