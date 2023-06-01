@@ -45,7 +45,7 @@ export default function LandingCareer() {
             Discover the Different Paths in Computer Science
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            The field of Computer Science offers a diverse range of careers, each with its own unique set of skills and responsibilities. Whether you're interested in creating software, analyzing data, securing systems, or managing tech projects, there's a place for you in this dynamic industry.
+            The field of Computer Science offers a diverse range of careers, each with its own unique set of skills and responsibilities. Whether you&apos;re interested in creating software, analyzing data, securing systems, or managing tech projects, there&apos;s a place for you in this dynamic industry.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

@@ -1,11 +1,3 @@
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from '@heroicons/react/20/solid';
 import CareerCard from './CareerCard';
 const careers = [
   {
@@ -109,7 +101,7 @@ export default function CareersHeader() {
           <h2 className="text-base font-semibold leading-7 text-indigo-400">Explore the Possibilities</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Top Careers in Computer Science</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Discover the various careers in the field of computer science. Each path offers unique opportunities and challenges. It's time to make your mark in the tech-driven future.
+            Discover the various careers in the field of computer science. Each path offers unique opportunities and challenges. It&apos;s time to make your mark in the tech-driven future.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">

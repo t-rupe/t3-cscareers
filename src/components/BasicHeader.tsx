@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../../public/cscareerslogo.png'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -16,10 +16,11 @@ export default function BasicHeader() {
     <header className="bg-gray-900">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-        <a href="/" className="-m-1.5 p-1.5">
-        <Image src="/cscareerslogo.svg" alt="CS Careers" width={64} height={32} />
-        </a>
-
+          <Link href="/">
+            <div className="-m-1.5 p-1.5">
+              <Image src="/cscareerslogo.svg" alt="CS Careers" width={64} height={32} />
+            </div>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -33,9 +34,9 @@ export default function BasicHeader() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-lg font-semibold leading-6 text-white">
-              {item.name}
-            </a>
+            <Link key={item.name} href={item.href}>
+              <div className="text-lg font-semibold leading-6 text-white">{item.name}</div>
+            </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -46,14 +47,18 @@ export default function BasicHeader() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">CS Careers</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt=""
-              />
-            </a>
+            <Link href="#">
+              <div className="-m-1.5 p-1.5">
+                <span className="sr-only">CS Careers</span>
+                <Image
+                  className="h-8 w-auto"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  alt=""
+                  width={64}
+                  height={32}
+                />
+              </div>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-400"
@@ -67,22 +72,23 @@ export default function BasicHeader() {
             <div className="-my-6 divide-y divide-gray-500/25">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                  >
-                    {item.name}
-                  </a>
+                  <Link key={item.name} href={item.href}>
+                    <div
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                    >
+                      {item.name}
+                    </div>
+                  </Link>
                 ))}
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                >
-                  Log in
-                </a>
+                <Link href="#">
+                  <a
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  >
+                    Log in
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

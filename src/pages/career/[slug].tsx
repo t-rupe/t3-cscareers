@@ -4,6 +4,7 @@ import { getClient } from '../../../sanity';
 import CareerLayout from './layout';
 import { PortableText, PortableTextComponentProps } from '@portabletext/react'
 import type { PortableTextBlock, PortableTextMarkDefinition, PortableTextSpan, ArbitraryTypedObject } from '@portabletext/types'
+import Image from 'next/image';
 
 interface ResponsiveImage {
   width: number;
@@ -67,7 +68,7 @@ export default function BlogPost({ article }: BlogPostProps) {
           <div className="mt-6 text-xl leading-8 prose dark:prose-invert">
             {article.featuredImage && (
               <div className="mt-6">
-                <img className="w-full" src={article.featuredImage.responsiveImage.src} alt={article.featuredImage.alt} />
+                <Image className="w-full" src={article.featuredImage.responsiveImage.src} alt={article.featuredImage.alt} />
               </div>
             )}
             <PortableText value={article.content} components={components} />

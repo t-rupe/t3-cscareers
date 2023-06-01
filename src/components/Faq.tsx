@@ -7,7 +7,7 @@ export default function Faq() {
     function SoftwareEngineerAnswer() {
         return (
           <span>
-            The highest paid job in computer science is the Software engineer, particularly in the realm of Distributed Systems (Back-End), can reward professionals with sky-high salaries. Let's consider a real example: a Level L5 Software Engineer at Snap, based in San Francisco. As of 2023, this talented professional, with 10 years of experience and a master's degree, is pulling in a yearly total compensation of a whopping $500,000! That's the magic of being a software engineer – the intersection of passion, skill, and lucrative compensation. Source: {' '}
+            The highest paid job in computer science is the Software engineer, particularly in the realm of Distributed Systems (Back-End), can reward professionals with sky-high salaries. Let&apos;s consider a real example: a Level L5 Software Engineer at Snap, based in San Francisco. As of 2023, this talented professional, with 10 years of experience and a master&apos;s degree, is pulling in a yearly total compensation of a whopping $500,000! That&apos;s the magic of being a software engineer – the intersection of passion, skill, and lucrative compensation. Source: {' '}
             <a href="https://www.levels.fyi/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-700">
               Levels.fyi
             </a>

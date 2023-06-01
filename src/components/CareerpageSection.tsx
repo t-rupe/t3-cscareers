@@ -1,4 +1,3 @@
-import Link from 'next/link'
 export default function CareerpageSection() {
     return (
         
@@ -17,7 +16,7 @@ According to the Bureau of Labor Statistics (BLS), the job outlook for computer 
 Within the realm of computer science, certain job roles exhibit even higher growth rates. For instance, computer and information research scientists are projected to experience rapid expansion, presenting exceptional prospects for those pursuing advanced careers in research and development. </p>
 
 <p className="mb-4 font-medium">
-The range of career opportunities in computer science is diverse and caters to individuals with varying educational backgrounds. Graduates with associate degrees can explore roles as computer support specialists or web developers, utilizing their skills to provide technical assistance and create engaging web experiences. On the other hand, bachelor's degree holders have access to a vast array of career paths, including software development, database administration, and computer programming. These roles involve designing and implementing cutting-edge solutions that power the digital world.        </p>
+The range of career opportunities in computer science is diverse and caters to individuals with varying educational backgrounds. Graduates with associate degrees can explore roles as computer support specialists or web developers, utilizing their skills to provide technical assistance and create engaging web experiences. On the other hand, bachelor&apos;s degree holders have access to a vast array of career paths, including software development, database administration, and computer programming. These roles involve designing and implementing cutting-edge solutions that power the digital world.        </p>
         <p className="mb-4 font-medium">
             With information spanning from Software Development to Data Science, UI/UX Design to Blockchain Development, you can chart your course with confidence. Explore, learn, and step into your future.
         </p>
