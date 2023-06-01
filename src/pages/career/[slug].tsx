@@ -37,9 +37,8 @@ interface BlogPostProps {
   article: Article;
 }
 
-interface BlockComponentProps extends PortableTextComponentProps<MyBlock> {}
 
-type BlockComponent = React.FC<BlockComponentProps>;
+type BlockComponent = React.FC<PortableTextComponentProps<MyBlock>>;
 
 interface Components {
   block: Record<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal', BlockComponent>;
@@ -47,13 +46,13 @@ interface Components {
 
 const components: Components = {
   block: {
-    h1: ({ children }: BlockComponentProps) => <h1>{children}</h1>,
-    h2: ({ children }: BlockComponentProps) => <h2>{children}</h2>,
-    h3: ({ children }: BlockComponentProps) => <h3>{children}</h3>,
-    h4: ({ children }: BlockComponentProps) => <h4>{children}</h4>,
-    h5: ({ children }: BlockComponentProps) => <h5>{children}</h5>,
-    h6: ({ children }: BlockComponentProps) => <h6>{children}</h6>,
-    normal: ({ children }: BlockComponentProps) => <p>{children}</p>,
+    h1: ({ children }: PortableTextComponentProps<MyBlock>) => <h1>{children}</h1>,
+    h2: ({ children }: PortableTextComponentProps<MyBlock>) => <h2>{children}</h2>,
+    h3: ({ children }: PortableTextComponentProps<MyBlock>) => <h3>{children}</h3>,
+    h4: ({ children }: PortableTextComponentProps<MyBlock>) => <h4>{children}</h4>,
+    h5: ({ children }: PortableTextComponentProps<MyBlock>) => <h5>{children}</h5>,
+    h6: ({ children }: PortableTextComponentProps<MyBlock>) => <h6>{children}</h6>,
+    normal: ({ children }: PortableTextComponentProps<MyBlock>) => <p>{children}</p>,
   },
 };
 
