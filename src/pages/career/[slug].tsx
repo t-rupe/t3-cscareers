@@ -2,7 +2,7 @@ import React from 'react';
 import { groq } from 'next-sanity';
 import { getClient } from '../../../sanity';
 import CareerLayout from './layout';
-import { PortableText, PortableTextComponentProps } from '@portabletext/react'
+import { PortableText, type PortableTextComponentProps } from '@portabletext/react'
 import type { PortableTextBlock, PortableTextMarkDefinition, PortableTextSpan, ArbitraryTypedObject } from '@portabletext/types'
 import Image from 'next/image';
 

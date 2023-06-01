@@ -1,30 +1,57 @@
 import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
+
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'Careers', href: '/career' },
-  
 ]
 
-type Career = 'Web Developer' | 'Software Engineer' | 'Data Scientist' | 'IT Architect' | 'System Architect' | 'UX/UI Designer' | 'Database Administrator' | 'Computer Network Architect' | 'Information Security Analyst' | 'Video Game Developer' | 'Web Designer' | 'Information Researcher' | 'Software Developer'
+type Career =
+  | 'Web Developer'
+  | 'Software Engineer'
+  | 'Data Scientist'
+  | 'IT Architect'
+  | 'System Architect'
+  | 'UX/UI Designer'
+  | 'Database Administrator'
+  | 'Computer Network Architect'
+  | 'Information Security Analyst'
+  | 'Video Game Developer'
+  | 'Web Designer'
+  | 'Information Researcher'
+  | 'Software Developer'
 
 export default function LandingHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
+
   const [career, setCareer] = useState<Career>('Software Developer')
-    const careers: Career[] = ['Web Developer', 'Software Engineer', 'Data Scientist', 'IT Architect', 'System Architect', 'UX/UI Designer', 'Database Administrator',
-        'Computer Network Architect', 'Information Security Analyst', 'Video Game Developer', 'Web Designer', 'Information Researcher', 'Software Developer',]
+  const careers: Career[] = [
+    'Web Developer',
+    'Software Engineer',
+    'Data Scientist',
+    'IT Architect',
+    'System Architect',
+    'UX/UI Designer',
+    'Database Administrator',
+    'Computer Network Architect',
+    'Information Security Analyst',
+    'Video Game Developer',
+    'Web Designer',
+    'Information Researcher',
+    'Software Developer',
+  ]
 
   useEffect(() => {
-    let i = 0;
+    let i = 0
     const timer = setInterval(() => {
-        setCareer(careers[i] as Career);
-        i = (i + 1) % careers.length; // Cycles through careers
-    }, 1300); //Changes every 2 seconds
+      setCareer(careers[i] as Career)
+      i = (i + 1) % careers.length // Cycles through careers
+    }, 1300) //Changes every 2 seconds
 
-    return () => clearInterval(timer); //Clear interval on unmount
-  }, []);
+    return () => clearInterval(timer) //Clear interval on unmount
+  }, [])
 
   return (
     <div className="bg-gray-900">
@@ -32,11 +59,8 @@ export default function LandingHeader() {
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                alt=""
-              />
+              <span className="sr-only">CS Careers</span>
+              <Image src="/cscareerslogo.svg" alt="CS Careers" width={32} height={16} />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -56,8 +80,7 @@ export default function LandingHeader() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
@@ -65,10 +88,11 @@ export default function LandingHeader() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
+                <Image
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                   alt=""
+                  width={32}
+                  height={32}
                 />
               </a>
               <button
@@ -108,10 +132,11 @@ export default function LandingHeader() {
       </header>
 
       <div className="relative isolate overflow-hidden pt-14">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
           alt=""
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          layout="fill"
+          className="absolute inset-0 -z-10 object-cover"
         />
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -126,13 +151,12 @@ export default function LandingHeader() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl whitespace-nowrap">
               Become a <span className="text-indigo-500">{career}</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-            Empower Yourself with the Skills and Knowledge to Shape a Tech-Driven Future
+              Empower Yourself with the Skills and Knowledge to Shape a Tech-Driven Future
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -141,7 +165,6 @@ export default function LandingHeader() {
               >
                 Get started
               </a>
-              
             </div>
           </div>
         </div>
