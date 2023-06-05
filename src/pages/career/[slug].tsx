@@ -62,9 +62,8 @@ export default function BlogPost({ article }: BlogPostProps) {
       <div className="bg-gray-900 px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-white">
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">{article.title}</h1>
-          <p className="mt-2 text-white">{new Date(article.datePublished).toLocaleDateString()}</p>
-      
-          <div className="mt-6 text-xl leading-8 prose prose-white dark:prose-invert">
+          <p className="mt-2 text-white">{new Date(article.datePublished).toLocaleDateString()}</p>     
+          <div className="mt-6 text-xl leading-8 prose prose-gray dark:prose-invert">
             {article.featuredImage && (
               <div className="mt-6">
                 <Image 
