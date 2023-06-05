@@ -12,7 +12,7 @@ interface Career {
 function CareerCard({ career }: {career: Career }) {
   return (
     <div className="max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow flex flex-col">
-      <Link href={`/careers/${career.name}`}>
+      <Link href="/career/[slug]" as={'/career/${career.slug}'}>
         <div className="relative h-40">
           <Image 
             src={career.img} 
