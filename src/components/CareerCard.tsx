@@ -25,7 +25,7 @@ function CareerCard({ career }: {career: Career }) {
       </Link>
       <div className="p-5 flex-grow flex flex-col justify-between">
         <div>
-          <Link href={`/career/${career.name}`}>
+        <Link href="/career/[slug]" as={`/career/${career.slug}`}>
             <div>
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{career.name}</h5>
             </div>
