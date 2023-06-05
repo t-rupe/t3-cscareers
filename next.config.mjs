@@ -20,7 +20,7 @@ const config = {
   },
 
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["cdn.sanity.io"],
   },
 };
 export default config;
