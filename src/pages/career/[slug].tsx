@@ -92,7 +92,7 @@ export async function getServerSideProps({ params }: { params: { slug: string } 
       "datePublished": publishedAt,
       "content": body[],
       "featuredImage": {
-        "alt": mainImage.alt,
+        "alt": mainImage.altText,
         "responsiveImage": {
           "src": mainImage.asset->url,
           "width": mainImage.asset->metadata.dimensions.width,
