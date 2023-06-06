@@ -81,15 +81,6 @@ export default function BasicHeader() {
                   </Link>
                 ))}
               </div>
-              <div className="py-6">
-                <Link href="#">
-                  <a
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                  >
-                    Log in
-                  </a>
-                </Link>
-              </div>
             </div>
           </div>
         </Dialog.Panel>
