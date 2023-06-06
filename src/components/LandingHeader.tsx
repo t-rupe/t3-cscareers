@@ -118,15 +118,7 @@ export default function LandingHeader() {
                       {item.name}
                     </Link>
                   ))}
-                </div>
-                <div className="py-6">
-                  <Link
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-8xl font-semibold leading-7 text-white hover:bg-gray-800"
-                  >
-                    Log in
-                  </Link>
-                </div>
+                </div>    
               </div>
             </div>
           </Dialog.Panel>
