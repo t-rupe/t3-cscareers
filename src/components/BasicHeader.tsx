@@ -35,7 +35,7 @@ export default function BasicHeader() {
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <Link key={item.name} href={item.href}>
-              <div className="text-lg font-semibold leading-6 text-white">{item.name}</div>
+              <div className="text-xl font-semibold leading-6 text-white">{item.name}</div>
             </Link>
           ))}
         </div>

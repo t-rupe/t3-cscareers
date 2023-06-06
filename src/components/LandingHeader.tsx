@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 const navigation = [
-  { name: 'Home', href: '#' },
+  { name: 'Home', href: '/' },
   { name: 'Careers', href: '/career' },
 ]
 
@@ -58,38 +58,33 @@ export default function LandingHeader() {
   return (
     <div className="bg-gray-900">
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div className="flex lg:flex-1">
-            <Link href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">CS Careers</span>
-              <Image src="/cscareerslogo.svg" alt="CS Careers" width={32} height={16} />
-            </Link>
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-lg font-semibold leading-6 text-white">
-                {item.name}
-              </Link>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
-        </nav>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+  <div className="flex items-center justify-center lg:flex-1">
+    <div className="hidden py-5 lg:flex lg:gap-x-12">
+      {navigation.map((item) => (
+        <Link key={item.name} href={item.href} className="text-xl font-semibold  text-white">
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+  <div className="flex lg:hidden">
+    <button
+      type="button"
+      className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+      onClick={() => setMobileMenuOpen(true)}
+    >
+      <span className="sr-only">Open main menu</span>
+      <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+    </button>
+  </div>
+</nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
               <Link href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Computer Science Careers</span>
                 <Image
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                   alt=""
@@ -144,7 +139,7 @@ export default function LandingHeader() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-40">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl whitespace-nowrap">
               Become a <span className="text-indigo-500">{career}</span>
