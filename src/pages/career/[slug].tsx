@@ -5,10 +5,11 @@ import CareerLayout from './layout';
 import { PortableText, type PortableTextComponentProps } from '@portabletext/react'
 import type { PortableTextBlock, PortableTextMarkDefinition, PortableTextSpan, ArbitraryTypedObject } from '@portabletext/types'
 import Image from 'next/image';
+import Head from 'next/head'
 
 interface ResponsiveImage {
   width: number;
-  title: string;
+  title: string; 
   srcSet: string;
   src: string;
   height: number;
@@ -57,8 +58,13 @@ const components: Components = {
 };
 
 export default function BlogPost({ article }: BlogPostProps) {
+  const {title, metaDescription } = article;
   return (
-    <CareerLayout>
+    <CareerLayout title={title} metaDescription={metaDescription}>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={metaDescription} />
+      </Head>
       <div className="bg-gray-900 px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 text-white">
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">{article.title}</h1>

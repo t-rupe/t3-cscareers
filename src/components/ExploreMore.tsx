@@ -113,15 +113,13 @@ const careers: Career[] = [
     function shuffleArray(array: Career[]): Career[] {
       const arr = [...array];
       for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = arr[i];
-        arr[i] = arr[j] as Career;
-        arr[j] = temp as Career;
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = arr[i];
+          arr[i] = arr[j]!;
+          arr[j] = temp!;
       }
       return arr;
     }
-    
-    
   
   
     useEffect(() => {
@@ -130,8 +128,7 @@ const careers: Career[] = [
         const careersToDisplay = shuffledCareers.slice(0, 3).sort((a: Career, b: Career) => a.slug.localeCompare(b.slug));
         setDisplayedCareers(careersToDisplay);
       }
-    }, [currentSlug, otherCareers]);
-    
+    }, [currentSlug]);
     
   
     return (
