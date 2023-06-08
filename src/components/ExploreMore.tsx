@@ -128,7 +128,8 @@ const careers: Career[] = [
         const careersToDisplay = shuffledCareers.slice(0, 3).sort((a: Career, b: Career) => a.slug.localeCompare(b.slug));
         setDisplayedCareers(careersToDisplay);
       }
-    }, [currentSlug]);
+    }, [currentSlug, otherCareers]);
+    
     
   
     return (
