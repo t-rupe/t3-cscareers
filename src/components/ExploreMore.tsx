@@ -113,13 +113,15 @@ const careers: Career[] = [
     function shuffleArray(array: Career[]): Career[] {
       const arr = [...array];
       for (let i = arr.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          const temp = arr[i];
-          arr[i] = arr[j]!;
-          arr[j] = temp!;
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = arr[i];
+        arr[i] = arr[j] as Career;
+        arr[j] = temp as Career;
       }
       return arr;
     }
+    
+    
   
   
     useEffect(() => {
