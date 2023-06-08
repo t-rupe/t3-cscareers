@@ -44,7 +44,7 @@ export default function LandingCareer() {
       </Link>          <p className="mt-2 text-3x4 font-bold tracking-tight text-white sm:text-4xl">
             Discover the Different Paths in Computer Science
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-6 text-lg leading-8 text-gray-200">
             The field of Computer Science offers a diverse range of careers, each with its own unique set of skills and responsibilities. Whether you&apos;re interested in creating software, analyzing data, securing systems, or managing tech projects, there&apos;s a place for you in this dynamic industry.
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function LandingCareer() {
                   <career.icon className="h-5 w-5 flex-none text-indigo-400" aria-hidden="true" />
                   {career.name}
                 </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
                   <p className="flex-auto">{career.description}</p>
                   <p className="mt-6">
                     <a href={career.href} className="text-sm font-semibold leading-6 text-indigo-400">

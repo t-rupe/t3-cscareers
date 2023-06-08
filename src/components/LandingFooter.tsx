@@ -62,13 +62,13 @@ export default function LandingFooter() {
         </nav>
         <div className="flex justify-center space-x-10">
           {navigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+            <a key={item.name} href={item.href} className="text-gray-200 hover:text-gray-500">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-5 text-center text-xs leading-5 text-gray-500">
+        <p className="mt-5 text-center text-xs leading-5 text-gray-200">
           &copy; 2023 ComputerScience.Careers. All rights reserved.
         </p>
       </div>

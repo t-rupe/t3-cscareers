@@ -4,7 +4,7 @@ export default function CareerpageSection() {
 <section className="bg-gray-900">
     <hr className="border-t border-gray-700"></hr>
     <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="max-w-screen-lg sm:text-lg text-gray-300">
+        <div className="max-w-screen-lg sm:text-lg text-gray-200">
         <h2 className="mb-4 text-4xl tracking-tight font-bold text-indigo-600">Empowering innovation at <span className="font-extrabold">200,000+</span> companies worldwide</h2>
         <p className="mb-4 font-medium">
 The field of computer science offers a promising future for graduates seeking dynamic and rewarding careers. With the growing demand for technology professionals, there are abundant opportunities to make a significant impact in various industries. </p>
@@ -53,7 +53,7 @@ The range of career opportunities in computer science is diverse and caters to i
                     <th className="px-4 py-2 text-green-400">Salary</th>
                 </tr>
             </thead>
-            <tbody className="text-gray-300">
+            <tbody className="text-gray-200">
                 <tr className="border-t border-gray-600">
                     <td className="px-4 py-2">Software publishers</td>
                     <td className="px-4 py-2 text-green-400">$130,180</td>
