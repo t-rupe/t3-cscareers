@@ -7,7 +7,6 @@ interface Career {
   description: string;
   img: string;
   slug: string;
-  linkDescription: string;
 }
 
 function CareerCard({ career }: {career: Career }) {
@@ -28,7 +27,7 @@ function CareerCard({ career }: {career: Career }) {
         <div>
         <Link href="/career/[slug]" as={`/career/${career.slug}`}>
             <div>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{career.name}</h5>
+              <h3 className="mb-2 text-2xl font-bold tracking-tight text-white">{career.name}</h3>
             </div>
           </Link>
           <div className="h-38 overflow-hidden">

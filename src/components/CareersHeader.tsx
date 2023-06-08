@@ -98,8 +98,8 @@ export default function CareersHeader() {
             <hr className="border-t border-gray-700 mb-6"></hr>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base font-semibold leading-7 text-indigo-400">Explore the Possibilities</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Top Careers in Computer Science</p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl flex">Top Careers in Computer Science</h2>
+        
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Discover the various careers in the field of computer science. Each path offers unique opportunities and challenges. It&apos;s time to make your mark in the tech-driven future.
           </p>
