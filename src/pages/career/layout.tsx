@@ -11,10 +11,6 @@ export default function CareerLayout({
   }) {
     return (
       <section>
-        <Head>
-          <title>Explore Exciting Career Paths in Computer Science | ComputerScience.Careers</title>
-          <meta name="description" content="Explore diverse computer science careers, gain expert guidance, and build a successful future with ComputerScience.Careers." />
-        </Head>
         <BasicHeader />
         {children}
         <DynamicFAQ />
