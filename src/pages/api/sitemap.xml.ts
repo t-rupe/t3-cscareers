@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { create } from 'xmlbuilder2';
 import { groq } from 'next-sanity';
 import { getClient } from '../../../sanity'; 
@@ -10,12 +10,12 @@ interface SanityPostSlug {
   }
 
 async function getStaticRoutes(): Promise<Route[]> {
-    return [
+    return Promise.resolve( [
         '/',
         '/privacy-policy',
         '/terms-of-use',
         '/career',
-    ];
+    ]);
 }
 
 async function getDynamicCareerRoutes(): Promise<Route[]> {
