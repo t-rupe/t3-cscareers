@@ -28,7 +28,6 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "src/pages/api/sitemap.xml.js",
-  ],
+    ],
   "exclude": ["node_modules"]
 }
