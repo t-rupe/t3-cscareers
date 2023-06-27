@@ -33,7 +33,7 @@ function urlFor(source: Record<string, unknown>) {
   
   export default function DegreesBlogHeader() {
     const [posts, setPosts] = useState<Post[]>([]);
-
+  
     useEffect(() => {
       const fetchPosts = async () => {
         const query = groq`*[_type == "post" && "Degrees" in categories[]->title && defined(mainImage)] {         
@@ -42,8 +42,12 @@ function urlFor(source: Record<string, unknown>) {
           "imageUrl": mainImage.asset->url,
           publishedAt,
         }`;
-        const data: Post[] = await client.fetch(query);
-        setPosts(data);
+        try {
+          const data: Post[] = await client.fetch(query);
+          setPosts(data);
+        } catch(error) {
+          console.error("Error fetching posts: ", error);
+        }
       };
   
       fetchPosts();
@@ -76,12 +80,6 @@ function urlFor(source: Record<string, unknown>) {
                       <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
                         <circle cx={1} cy={1} r={1} />
                       </svg>
-                      {/* If you have author information in your post data you can uncomment this
-                      <div className="flex gap-x-2.5">
-                        <img src={post.author.imageUrl} alt="" className="h-6 w-6 flex-none rounded-full bg-white/10" />
-                        {post.author.name}
-                      </div>
-                      */}
                     </div>
                   </div>
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-200">
