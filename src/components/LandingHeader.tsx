@@ -6,6 +6,7 @@ import Link from 'next/link'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Careers', href: '/career' },
+  { name: 'Degrees', href: '/degrees' },
 ]
 
 type Career =

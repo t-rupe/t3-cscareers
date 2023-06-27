@@ -7,6 +7,7 @@ import Image from 'next/image'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Careers', href: '/career' },
+  { name: 'Degrees', href: '/degrees' },
 ]
 
 export default function BasicHeader() {
@@ -15,12 +16,7 @@ export default function BasicHeader() {
   return (
     <header className="bg-gray-900">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link href="/">
-            <div className="-m-1.5 p-1.5">
-              <Image src="/cscareerslogo.svg" alt="CS Careers" width={64} height={32} />
-            </div>
-          </Link>
+        <div className="flex py-8 lg:flex-1">
         </div>
         <div className="flex lg:hidden">
           <button

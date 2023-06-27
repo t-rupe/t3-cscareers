@@ -1,7 +1,7 @@
 import React from 'react';
 import { groq } from 'next-sanity';
 import { getClient } from '../../../sanity';
-import CareerLayout from './layout';
+import DegreesLayout from './layout';
 import { PortableText, type PortableTextComponentProps } from '@portabletext/react'
 import type { PortableTextBlock, PortableTextMarkDefinition, PortableTextSpan, ArbitraryTypedObject } from '@portabletext/types'
 import Image from 'next/image';
@@ -68,7 +68,7 @@ const components: Components = {
 export default function BlogPost({ article }: BlogPostProps) {
   const {title, metaDescription } = article;
   return (
-    <CareerLayout title={title} metaDescription={metaDescription}>
+    <DegreesLayout title={title} metaDescription={metaDescription}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={metaDescription} />
@@ -93,7 +93,7 @@ export default function BlogPost({ article }: BlogPostProps) {
           </div>
         </div>
       </div>
-    </CareerLayout>
+    </DegreesLayout>
   );
 }
 
@@ -119,7 +119,7 @@ export async function getServerSideProps({ params }: { params: { slug: string } 
   const data: Article = await getClient().fetch(query, { slug });
 
   // If no article found or the article does not belong to the "Careers" category
-  if (!data || !data.categories.map(category => category.title).includes("Careers")) {
+  if (!data || !data.categories.map(category => category.title).includes("Degrees")) {
     return {
       notFound: true,
     }
