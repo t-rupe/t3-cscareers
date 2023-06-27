@@ -1,20 +1,14 @@
 import { useEffect, useState } from 'react';
 import {createClient} from '@sanity/client'
-import imageUrlBuilder from '@sanity/image-url';
 import groq from 'groq';
 
-interface Author {
-    name: string;
-    imageUrl: string;
-  }
-  
-  interface Post {
-    id: string;
-    title: string;
-    slug: string;
-    imageUrl: string;
-    publishedAt: string;
-  }
+interface Post {
+  id: string;
+  title: string;
+  slug: string;
+  imageUrl: string;
+  publishedAt: string;
+}
 
 // Setup the Sanity client
 const client = createClient({
@@ -23,35 +17,28 @@ const client = createClient({
   useCdn: true
 });
 
-// To generate image URLs
-const builder = imageUrlBuilder(client);
+export default function DegreesBlogHeader() {
+  const [posts, setPosts] = useState<Post[]>([]);
 
-// This function generates the URL for the images
-function urlFor(source: Record<string, unknown>) {
-    return builder.image(source);
-  }
-  
-  export default function DegreesBlogHeader() {
-    const [posts, setPosts] = useState<Post[]>([]);
-  
-    useEffect(() => {
-      const fetchPosts = async () => {
-        const query = groq`*[_type == "post" && "Degrees" in categories[]->title && defined(mainImage)] {         
-          title,
-          "slug": slug.current,
-          "imageUrl": mainImage.asset->url,
-          publishedAt,
-        }`;
-        try {
-          const data: Post[] = await client.fetch(query);
-          setPosts(data);
-        } catch(error) {
-          console.error("Error fetching posts: ", error);
-        }
-      };
-  
-      fetchPosts();
-    }, []);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const query = groq`*[_type == "post" && "Degrees" in categories[]->title && defined(mainImage)] {         
+        title,
+        "slug": slug.current,
+        "imageUrl": mainImage.asset->url,
+        publishedAt,
+      }`;
+
+      try {
+        const data: Post[] = await client.fetch(query);
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    };
+
+    fetchPosts();
+  }, []);
     return (
         <div className="bg-gray-900 py-1 sm:py-1">
             <hr className="border-t border-gray-700 mb-6"></hr>
