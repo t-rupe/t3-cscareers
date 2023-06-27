@@ -22,7 +22,7 @@ export default function DegreesBlogHeader() {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchPosts = () => {
       const query = groq`*[_type == "post" && "Degrees" in categories[]->title && defined(mainImage)] {         
         title,
         "slug": slug.current,
