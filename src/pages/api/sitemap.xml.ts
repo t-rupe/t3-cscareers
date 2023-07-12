@@ -20,17 +20,19 @@ async function getStaticRoutes(): Promise<Route[]> {
 }
 
 async function getDynamicCareerRoutes(): Promise<Route[]> {
-    const query = groq`*[_type == "post"]{ "slug": slug.current }`;
+    // Query Sanity for posts with a referenced category having the title "Career"
+    const query = groq`*[_type == "post" && "Careers" in categories[]->title]{ "slug": slug.current }`;
     const data: SanityPostSlug[] = await getClient().fetch(query);
     return data.map((item: SanityPostSlug) => `/career/${item.slug}`);
 }
 
 async function getDynamicDegreeRoutes(): Promise<Route[]> {
-    // Query Sanity for posts in the "Degrees" category with a defined main image
-    const query = groq`*[_type == "post" && category == "Degrees" && defined(mainImage)]{ "slug": slug.current }`;
+    // Query Sanity for posts with a referenced category having the title "Degrees"
+    const query = groq`*[_type == "post" && "Degrees" in categories[]->title]{ "slug": slug.current }`;
     const data: SanityPostSlug[] = await getClient().fetch(query);
-    return data.map((item: SanityPostSlug) => `/degrees/${item.slug}`); // Note the path change here
+    return data.map((item: SanityPostSlug) => `/degrees/${item.slug}`);
 }
+
 
 export default async function sitemap(req: NextApiRequest, res: NextApiResponse) {
     const staticRoutes = await getStaticRoutes();
