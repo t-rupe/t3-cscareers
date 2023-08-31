@@ -31,6 +31,7 @@
     "react": "18.2.0",
     "react-datocms": "^4.0.15",
     "react-dom": "18.2.0",
+    "sanity": "^3.16.2",
     "superjson": "1.12.2",
     "xmlbuilder": "^15.1.1",
     "xmlbuilder2": "^3.1.1",

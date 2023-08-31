@@ -1,4 +1,4 @@
-import { createClient } from 'next-sanity';
+import { createClient } from '@sanity/client';
 import { config } from './sanity.config';
 import path from 'path';
 
