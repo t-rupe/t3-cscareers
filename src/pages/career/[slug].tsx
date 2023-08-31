@@ -5,7 +5,8 @@ import CareerLayout from './layout';
 import { PortableText, type PortableTextComponentProps } from '@portabletext/react'
 import type { PortableTextBlock, PortableTextMarkDefinition, PortableTextSpan, ArbitraryTypedObject } from '@portabletext/types'
 import Image from 'next/image';
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 
 interface ResponsiveImage {
   width: number;
@@ -67,12 +68,22 @@ const components: Components = {
 
 export default function BlogPost({ article }: BlogPostProps) {
   const {title, metaDescription } = article;
+
+  const router = useRouter(); // Initialize useRouter
+  const currentPath = router.asPath; // Get the current path
+  const baseCanonicalUrl = "https://computerscience.careers/"; // Replace with your actual domain
+  const fullCanonicalUrl = `${baseCanonicalUrl}${currentPath}`; // Construct the full canonical URL
+
+  const seoConfig = {
+    title,
+    description: metaDescription,
+      canonical: fullCanonicalUrl, // Replace with the actual canonical URL
+  };
+
+
   return (
     <CareerLayout title={title} metaDescription={metaDescription}>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={metaDescription} />
-      </Head>
+      <NextSeo {...seoConfig} />
       <div className="bg-gray-900 px-6 py-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-base leading-7 prose prose-lightgray">
           <h1 className="mt-2 text-3xl font-bold tracking-tight prose prose-lightgray sm:text-4xl">{article.title}</h1>
