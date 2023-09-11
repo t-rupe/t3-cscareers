@@ -10,7 +10,13 @@ export default function Home() {
     <NextSeo 
       title="Terms of Use - CS Careers"
       description="Read our terms of use for our site CS Careers."
-      canonical="https://computerscience.careers/terms-of-use" />
+      canonical="https://computerscience.careers/terms-of-use/"
+      additionalMetaTags={[
+        {
+          name: 'robots',
+          content: 'index, follow',
+        }
+      ]} />
     <BasicHeader />
     <Terms />
     <LandingFooter />
