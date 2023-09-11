@@ -12,7 +12,14 @@ export default function Home() {
     <NextSeo 
     title="ComputerScience.Careers"
     description='Access expert advice, industry insights, and comprehensive resources to excel in software development, data science, cybersecurity, AI, and more. Transform your career in computer science with us.'
-    canonical='https://computerscience.careers/' />
+    canonical='https://computerscience.careers/'
+    additionalMetaTags={[
+      {
+        name: 'robots',
+        content: 'index, follow',
+      }
+    ]}
+     />
     <LandingHeader />
     <LandingCareer />
     <LandingSectionLanguages />

@@ -12,10 +12,10 @@ interface SanityPostSlug {
 async function getStaticRoutes(): Promise<Route[]> {
     return Promise.resolve( [
         '/',
-        '/privacy-policy',
-        '/terms-of-use',
-        '/career',
-        '/degrees', // Added your new page
+        '/privacy-policy/',
+        '/terms-of-use/',
+        '/career/',
+        '/degrees/', // Added your new page
     ]);
 }
 
@@ -23,14 +23,14 @@ async function getDynamicCareerRoutes(): Promise<Route[]> {
     // Query Sanity for posts with a referenced category having the title "Career"
     const query = groq`*[_type == "post" && "Careers" in categories[]->title]{ "slug": slug.current }`;
     const data: SanityPostSlug[] = await getClient().fetch(query);
-    return data.map((item: SanityPostSlug) => `/career/${item.slug}`);
+    return data.map((item: SanityPostSlug) => `/career/${item.slug}/`);
 }
 
 async function getDynamicDegreeRoutes(): Promise<Route[]> {
     // Query Sanity for posts with a referenced category having the title "Degrees"
     const query = groq`*[_type == "post" && "Degrees" in categories[]->title]{ "slug": slug.current }`;
     const data: SanityPostSlug[] = await getClient().fetch(query);
-    return data.map((item: SanityPostSlug) => `/degrees/${item.slug}`);
+    return data.map((item: SanityPostSlug) => `/degrees/${item.slug}/`);
 }
 
 
@@ -44,7 +44,7 @@ export default async function sitemap(req: NextApiRequest, res: NextApiResponse)
         urlset: {
             '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
             url: routes.map((route) => ({
-                loc: `https://computerscience.careers${route}`,
+                loc: `https://computerscience.careers${route}/`,
                 changefreq: 'weekly',
                 priority: 0.5,
             })),
