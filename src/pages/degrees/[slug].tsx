@@ -78,6 +78,12 @@ export default function BlogPost({ article }: BlogPostProps) {
     title,
     description: metaDescription,
       canonical: fullCanonicalUrl, // Replace with the actual canonical URL
+      additionalMetaTags: [
+        {
+            name: 'robots',
+            content: 'index, follow',
+        },
+    ],
   };
 
   return (
